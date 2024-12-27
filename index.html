@@ -4,34 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <script src="index.js" defer></script>
-    <title>To-Do</title>
+    <title>To-Do List</title>
 </head>
 <body>
-    <div id="main-left">
-        <div class="container"></div>
-    </div>
-    <div id="main-right">
-        <div id="StickyWall-title">
-            <p id="sticky-wall">Sticky Wall</p>
+    <div id="main-container">
+        <div id="main-left">
+            <div class="container-left"></div>
         </div>
-        <div id="container-right">
-            <button>
-                <svg xmlns="http://www.w3.org/2000/svg" height="30" width="30" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#5c5c5c" d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/></svg>
-            </button>
-        </div>
-    </div>
-
-    <!-- add task -->
-     <div class="add-task">
-        <div class="addTask-box">
-            <p class="addTask-title">Add task</p>
-            <div class="task-title">
-                <p class="title">Title</p>
-                <div class="box"></div>
-
+        <div id="main-right">
+            <div id="StickyWall-title">
+                <p id="sticky-wall">Sticky Wall</p>
+            </div>
+            <div id="container-right">
+                <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="30" width="30" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#5c5c5c" d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/></svg>
+                </button>
+                <ul id="task-container">
+                    <li>task 1</li>
+                    <li>task 2</li>
+                    <li>tadk 3</li>
+                </ul>
             </div>
         </div>
-     </div>
+    
+        <!-- add task -->
+        <div class="add-task">
+            <div class="addTask-box">
+                <p class="addTask-title">Add task</p>
+                <div class="task-title">
+                    <p class="title">Subject</p>
+                    <input type="text" class="box" placeholder="Add your text">
+                </div>
+                <div class="task-title">
+                    <p class="title">Description</p>
+                    <input type="text" placeholder="Add your text" class="box box2">
+                </div>
+                <div class="task-title">
+                    <p class="title">Status</p>
+                    <div class="box">
+                        <select>
+                            <option value="not started">Not started</option>
+                            <option value="in progress">In progress</option>
+                            <option value="done">Done</option>
+                        </select>
+                        <div class="icon-container">
+                            <i class="fa-solid fa-caret-down fa-sm" style="color: #b3b3b3;"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="task-title">
+                    <p class="title">Priority</p>
+                    <div class="box">
+                        <select>
+                            <option value="High">High</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Low">Low</option>
+                        </select>
+                        <div class="icon-container">
+                            <i class="fa-solid fa-caret-down fa-sm" style="color: #b3b3b3;"></i>
+                        </div>
+                    </div>
+                </div>
+                <button class="addTask-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="12" width="12" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#5c5c5c" d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/></svg> 
+                    Add task
+                </button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
